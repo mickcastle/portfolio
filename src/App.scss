@@ -1,0 +1,129 @@
+/* lato-regular - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/lato-regular.woff2") format("woff2");
+}
+/* lato-700 - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/lato-bold.woff2") format("woff2");
+}
+
+html {
+  overflow: unset;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  position: relative;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+// scrollbar styles
+::-webkit-scrollbar {
+  width: 0.5rem;
+  &-thumb {
+    background: var(--darkOrange);
+  }
+  &-track {
+    background: black;
+  }
+}
+// FF scrollbars
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--darkOrange) black;
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+ul[class],
+ol[class],
+li:not([class]),
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1 {
+  margin: 0.67em 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: unset !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: 700;
+}

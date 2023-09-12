@@ -1,0 +1,42 @@
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--darkOrange);
+  z-index: 1;
+  h1 {
+    margin: 0;
+    line-height: 1;
+    max-width: calc(100% - 100px);
+  }
+}
+.Header-LinkedIn {
+  position: absolute;
+  right: 1rem;
+  top: 5px;
+  height: 42px;
+  width: 42px;
+  cursor: pointer;
+}
+.Header-Mail {
+  position: absolute;
+  right: 4.5rem;
+  top: 5px;
+  height: 42px;
+  width: 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 425px) {
+  header {
+    h1 {
+      font-size: 1rem;
+    }
+  }
+  .Resume {
+    padding: 1rem;
+  }
+}

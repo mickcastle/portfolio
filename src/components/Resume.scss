@@ -1,0 +1,166 @@
+.Resume {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  box-sizing: border-box;
+  padding: 4rem;
+  margin-top: 52px;
+  ul {
+    padding-left: 0.75rem;
+    margin-top: 0;
+  }
+  li {
+    list-style-type: "»";
+    padding-inline-start: 0.8ch;
+  }
+  img {
+    border-radius: 15px;
+  }
+}
+
+.Resume-Details,
+.Resume-Profile {
+  flex-basis: calc(50% - 1rem);
+}
+
+.Resume-About {
+  margin-bottom: 2rem;
+}
+
+.workplace {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  h4 span {
+    font-weight: 400;
+    margin-left: 3rem;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: -10px;
+      left: -2rem;
+      font-size: 24px;
+      content: "»";
+      margin-right: 0.25rem;
+    }
+  }
+  > * {
+    margin: 0;
+  }
+}
+
+ul + .workplace {
+  margin-top: 2rem;
+}
+
+.Resume-Skills {
+  display: flex;
+  flex-direction: column;
+  li {
+    margin: 0;
+    margin-bottom: 0.15rem;
+  }
+}
+
+.Resume-Experience {
+  a {
+    color: pink;
+  }
+}
+
+.Resume-Details {
+  margin-right: 2rem;
+}
+
+.Resume-Profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  span {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+  h2 {
+    text-align: center;
+  }
+  a {
+    margin-left: 0.25rem;
+    // color: var(--blue);
+    // &:visited {
+    //   color: var(--blue);
+    // }
+    // &:hover {
+    //   color: var(--green);
+    // }
+    // &:active {
+    //   color: var(--red);
+    // }
+  }
+}
+
+@media screen and (max-width: 1267px) {
+  .Resume-Details {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100% !important;
+  }
+  .Resume-Experience {
+    margin-left: 2rem;
+  }
+  .Resume-Skills {
+    flex-shrink: 0;
+  }
+  .Resume-Profile {
+    flex-basis: 100%;
+    margin: 0 auto 2rem;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+  .Resume {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .Resume-Details {
+    flex-direction: column;
+  }
+
+  .Resume-Skills {
+    margin-left: 2rem;
+  }
+
+  .workplace {
+    flex-direction: column;
+    align-items: flex-start;
+    h4 span {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .Resume-Profile {
+    flex-basis: 100%;
+    order: -1;
+  }
+}
+
+li,
+h2,
+p,
+span {
+  color: white;
+}
