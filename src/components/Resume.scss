@@ -4,17 +4,21 @@
   width: 100%;
   font-family: "Roboto", sans-serif;
   color: #333;
+  background: #222;
   box-sizing: border-box;
   padding: 4rem;
   margin-top: 52px;
+
   ul {
     padding-left: 0.75rem;
     margin-top: 0;
   }
+
   li {
     list-style-type: "»";
     padding-inline-start: 0.8ch;
   }
+
   img {
     border-radius: 15px;
   }
@@ -29,12 +33,22 @@
   margin-bottom: 2rem;
 }
 
+aside {
+  margin-top: 2rem;
+}
+
+blockquote {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
 .workplace {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
   margin-bottom: 1rem;
+
   h4 span {
     font-weight: 400;
     margin-left: 3rem;
@@ -60,15 +74,10 @@ ul + .workplace {
 .Resume-Skills {
   display: flex;
   flex-direction: column;
+
   li {
     margin: 0;
     margin-bottom: 0.15rem;
-  }
-}
-
-.Resume-Experience {
-  a {
-    color: pink;
   }
 }
 
@@ -81,25 +90,19 @@ ul + .workplace {
   flex-direction: column;
   align-items: center;
   margin-bottom: 3rem;
+  margin-top: 2rem;
+
   span {
     font-size: 0.75rem;
     margin-top: 0.25rem;
   }
+
   h2 {
     text-align: center;
   }
+
   a {
     margin-left: 0.25rem;
-    // color: var(--blue);
-    // &:visited {
-    //   color: var(--blue);
-    // }
-    // &:hover {
-    //   color: var(--green);
-    // }
-    // &:active {
-    //   color: var(--red);
-    // }
   }
 }
 
@@ -109,15 +112,18 @@ ul + .workplace {
     justify-content: space-between;
     flex-basis: 100% !important;
   }
+
   .Resume-Experience {
     margin-left: 2rem;
   }
+
   .Resume-Skills {
     flex-shrink: 0;
   }
+
   .Resume-Profile {
     flex-basis: 100%;
-    margin: 0 auto 2rem;
+    margin: 2rem auto 2rem;
   }
 }
 
@@ -125,6 +131,7 @@ ul + .workplace {
   h1 {
     font-size: 1.25rem;
   }
+
   .Resume {
     padding: 1rem;
   }
@@ -142,6 +149,7 @@ ul + .workplace {
   .workplace {
     flex-direction: column;
     align-items: flex-start;
+
     h4 span {
       display: flex;
       flex-direction: column;
@@ -153,8 +161,24 @@ ul + .workplace {
   }
 
   .Resume-Profile {
+    margin-top: 0;
     flex-basis: 100%;
     order: -1;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .Resume-Skills,
+  .Resume-Experience {
+    margin-left: 1rem;
+  }
+
+  .Resume-Details {
+    margin-right: 1rem;
+  }
+
+  .Resume {
+    margin-top: 66px;
   }
 }
 

@@ -75,7 +75,6 @@ const Fly = () => {
     if (deathAnimation) {
       fly.classList.add("squash")
       setTimeout(() => {
-        // fly.classList.remove("squash")
         setAlive(false)
       }, 300)
     } else {

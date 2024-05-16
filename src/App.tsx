@@ -7,8 +7,8 @@ const App = () => {
   return (
     <>
       <Header />
-      <Fly />
       <Resume />
+      <Fly />
     </>
   )
 }

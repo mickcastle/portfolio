@@ -54,9 +54,11 @@
   z-index: 1;
   transition: all 0.4s ease-in-out;
   animation: fadeIn 5s ease-in-out;
+
   &::after {
     content: "";
   }
+
   img {
     animation: shake 1s infinite;
     cursor: pointer;

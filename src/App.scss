@@ -5,6 +5,7 @@
   font-weight: 400;
   src: url("./assets/lato-regular.woff2") format("woff2");
 }
+
 /* lato-700 - latin */
 @font-face {
   font-family: "Lato";
@@ -82,6 +83,19 @@ ol[class] {
 
 a:not([class]) {
   text-decoration-skip-ink: auto;
+}
+
+a {
+  color: pink;
+  &:visited {
+    color: pink;
+  }
+  &:hover {
+    color: darken(pink, 10%);
+  }
+  &:active {
+    color: darken(pink, 20%);
+  }
 }
 
 img {
