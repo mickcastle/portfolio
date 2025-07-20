@@ -30,6 +30,13 @@ export const techSeed = [
   "Coaching and pair programming with junior developers.",
 ]
 
+
+export const consid = [
+  "Through his exceptional dedication and technical expertise, Mick has significantly contributed to enhancing and refining the interface and functionality of the National Permit Register for Explosive Goods (NATEV). His efforts are marked by a proactive commitment to ongoing optimization, with a strong focus on ensuring the system's accessibility. His objective has been to systematically and strategically align user expectations with relevant regulations.",
+  "Contributed to the design and development of the Exercise Portal, a digital platform that empowers authorities to independently create, manage, and evaluate exercises through an intuitive and user-friendly interface. The focus was on optimizing the portal's functionality and flexibility to support efficient planning and evaluation of exercise components, customized to meet the specific needs of organizations. Responsibilities also included integrating with underlying REST APIs to ensure seamless and efficient data management.",
+  "Actively contributed to the development, enhancement, and optimization of both existing and new features on MSB.se, the digital platform for the Swedish Civil Contingencies Agency, over the course of several months. This work was marked by a strong dedication to improving user experience and functionality to better support the agency's mission.",
+]
+
 export const skills = [
   "CSS",
   "SCSS",
@@ -41,6 +48,14 @@ export const skills = [
   "User experience",
   "Unit-testing Jest",
   "Responsive web design",
+  "API integration",
+  "Rest API",
+  "Git",
+  "Design systems",
+  "Agile methodology",
+  "Code reviews",
+  "Node.js",
+  "Next.js",
 ]
 
 export const feedback = [

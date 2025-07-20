@@ -1,48 +1,206 @@
-header {
+.header {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gray-200);
+  z-index: 1000;
+  transition: all var(--transition-normal);
+
+  @media (prefers-color-scheme: dark) {
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom-color: var(--gray-800);
+  }
+}
+
+.header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  top: 0;
-  min-height: 52px;
-  width: 100%;
-  padding: 1rem;
-  background-color: var(--darkOrange);
-  z-index: 1;
+  padding: var(--spacing-4);
+  gap: var(--spacing-6);
+}
+
+.header-brand {
+  flex-shrink: 0;
 
   h1 {
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--gray-900);
     margin: 0;
-    line-height: 1;
-    max-width: calc(100% - 100px);
-  }
-}
+    line-height: 1.2;
 
-.Header-LinkedIn {
-  position: absolute;
-  right: 1rem;
-  top: 5px;
-  height: 42px;
-  width: 42px;
-  cursor: pointer;
-}
-
-.Header-Mail {
-  position: absolute;
-  right: 4.5rem;
-  top: 5px;
-  height: 42px;
-  width: 30px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 425px) {
-  header {
-    h1 {
-      font-size: 1rem;
+    @media (prefers-color-scheme: dark) {
+      color: var(--gray-100);
     }
   }
 
-  .Resume {
-    padding: 1rem;
+  .header-title {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+    margin: var(--spacing-1) 0 0 0;
+    font-weight: 500;
+
+    @media (prefers-color-scheme: dark) {
+      color: var(--gray-400);
+    }
+  }
+}
+
+.header-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--spacing-8);
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--gray-700);
+  cursor: pointer;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  position: relative;
+
+  &:hover {
+    color: var(--primary);
+    background-color: var(--gray-100);
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--gray-800);
+    }
+  }
+
+  &:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--gray-300);
+  }
+}
+
+.header-social {
+  display: flex;
+  gap: var(--spacing-3);
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background-color: var(--gray-100);
+  transition: all var(--transition-fast);
+
+  &:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--gray-800);
+
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  transition: filter var(--transition-fast);
+
+  &[alt*="LinkedIn"] {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-link:hover & {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .header-content {
+    padding: var(--spacing-3);
+  }
+
+  .hero-description {
+    margin: 0 auto;
+  }
+
+  .header-brand {
+    h1 {
+      font-size: var(--font-size-xl);
+    }
+
+    .header-title {
+      font-size: var(--font-size-xs);
+    }
+  }
+
+  .header-social {
+    gap: var(--spacing-2);
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-brand {
+    h1 {
+      font-size: var(--font-size-lg);
+    }
+  }
+
+  .social-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-icon {
+    width: 16px;
+    height: 16px;
   }
 }
